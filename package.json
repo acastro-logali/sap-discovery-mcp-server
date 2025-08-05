@@ -14,11 +14,23 @@
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "1.17.1",
 		"agents": "^0.0.109",
-		"zod": "^3.25.67"
+		"zod": "^3.25.67",
+		"axios": "^1.6.0",
+		"dotenv": "^16.3.1",
+		"xml2js": "^0.6.2"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.1.3",
+		"@types/node": "^24.2.0",
 		"typescript": "5.8.3",
 		"wrangler": "^4.27.0"
-	}
+	},
+	"bin": {
+		"sap-odata-mcp-server": "./dist/index.js"
+	},
+	"files": [
+		"dist/**/*",
+		"README.md",
+		"LICENSE"
+	]
 }
