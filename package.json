@@ -2,14 +2,18 @@
 	"name": "sap-discovery-mcp-server",
 	"version": "0.0.0",
 	"private": true,
+	"engines": {
+		"node": ">=20.x"
+	},
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
 		"format": "biome format --write",
 		"lint:fix": "biome lint --fix",
-		"start": "wrangler dev",
+		"start": "node dist/index.js",
 		"cf-typegen": "wrangler types",
-		"type-check": "tsc --noEmit"
+		"type-check": "tsc --noEmit",
+		"build": "tsc"
 	},
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "1.17.1",
